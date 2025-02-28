@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="../css/registration.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Medics | Registration</title>
+</head>
+
+<body>
+<div class="loader" id="loader"></div>
+
+<header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <a href="../index.html" class="logo-link">
+        <img src="../img/favicon.svg" alt="" class="logo-image" width="50" height="50">
+        Medics
+      </a>
+      <h2 class="header-title">Registration page
+        </h2>
+    </div>
+  </div>
+</header>
+
+<main id="myDiv" class="animate-bottom">
+  <div class="login-wrapper">
+    <div class="left-section">
+      <img src="../img/logo-white.svg" alt="Logo">
+    </div>
+
+    <div class="right-section">
+      <div class="form-container">
+        <div class="form-toggle">
+          <button class="active" id="signin-btn">Sign In</button>
+          <button id="signup-btn">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signin-form">
+          <div class="form-group">
+            <label for="signin-email">Email</label>
+            <input type="email" id="signin-email" required>
+          </div>
+          <div class="form-group">
+            <label for="signin-password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="signin-password" required>
+              <button type="button" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-firstname">First Name</label>
+            <input type="text" id="signup-firstname" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-lastname">Last Name</label>
+            <input type="text" id="signup-lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="signup-password" required>
+              <button type="button" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="signup-confirm-password" required>
+              <button type="button" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script type="module" src="../js/registration.js"></script>
+<script src="../js/style.js"></script>
+</body>
+</html>

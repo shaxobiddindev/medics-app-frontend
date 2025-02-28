@@ -1,0 +1,94 @@
+/* carousel.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px; /* Konteyner kengligi sizning dizayningizga mos */
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #199A8E;
+}
+
+.carousel-slides {
+  display: flex;
+  width: 300%; /* 3 ta slayd uchun */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  width: 33.33%; /* Har bir slayd 1/3 qismni egallaydi */
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Rasm o‘ngga, logo va matn chapga */
+  padding: 0 150px;
+}
+
+.carousel-image {
+  width: 400px; /* Rasm 70% kenglikda */
+  height: 600px;
+  object-fit: cover;
+  margin-left: auto; /* Rasmni o‘ngga surish */
+}
+
+.carousel-logo {
+  position: absolute;
+  left: 40px;
+  top: 40px; /* Logotip yuqoridan boshlanadi */
+  width: 100px; /* Logotip o‘lchami, o‘zgartirish mumkin */
+  height: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 40px;
+  top: 480px; /* Logotipdan keyin matn joylashadi */
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 300px; /* Matn kengligini cheklash */
+}
+
+.carousel-caption h3 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carousel-prev {
+  left: 0; /* Chap chetga joylashadi */
+}
+
+.carousel-next {
+  right: 0; /* O‘ng chetga joylashadi */
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

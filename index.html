@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Medics | Home</title>
+</head>
+
+<body>
+<div class="loader" id="loader"></div>
+
+<header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <a href="./index.html" class="logo-link">
+        <img src="img/favicon.svg" alt="" class="logo-image" width="50" height="50">
+        Medics
+      </a>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-list__item">
+            <a href="./index.html" class="navbar-link active">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="navbar-list__item">
+            <a href="./pages/message.html" class="navbar-link">
+              <i class="fa-solid fa-envelope"></i>
+              Message
+            </a>
+          </li>
+          <li class="navbar-list__item">
+            <a href="./pages/schedule.html" class="navbar-link">
+              <i class="fa-solid fa-calendar-days"></i>
+              Schedule
+            </a>
+          </li>
+          <li class="navbar-list__item">
+            <a href="./pages/profile.html" class="navbar-link">
+              <i class="fa-solid fa-user"></i>
+              Profile
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="myDiv" class="animate-bottom">
+  <div class="carousel-container">
+    <div class="carousel-slides" id="slides">
+      <a href="pages/registration.html" class="carousel-slide">
+        <img class="carousel-image" src="./img/carousel-image-1.png" alt="Slide 1">
+        <img class="carousel-logo" src="./img/logo-white.svg" alt="Logo">
+        <div class="carousel-caption">
+          <h3>Consult only with a doctor you trust</h3>
+        </div>
+      </a>
+      <a href="pages/registration.html" class="carousel-slide">
+        <img class="carousel-image" src="./img/carousel-image-2.png" alt="Slide 2">
+        <img class="carousel-logo" src="./img/logo-white.svg" alt="Logo">
+        <div class="carousel-caption">
+          <h3>Find a lot of specialist doctors in one place</h3>
+        </div>
+      </a>
+      <a href="pages/registration.html" class="carousel-slide">
+        <img class="carousel-image" src="./img/carousel-image-3.png" alt="Slide 3">
+        <img class="carousel-logo" src="./img/logo-white.svg" alt="Logo">
+        <div class="carousel-caption">
+          <h3>Get connect our Online Consultation</h3>
+        </div>
+      </a>
+    </div>
+    <button class="carousel-prev" onclick="moveSlide(-1)">❮</button>
+    <button class="carousel-next" onclick="moveSlide(1)">❯</button>
+  </div>
+</main>
+
+<script src="./js/carousel.js"></script>
+<script src="./js/style.js"></script>
+</body>
+</html>
