@@ -1,11 +1,14 @@
+
 // Loader
 window.addEventListener('load', function () {
-  setTimeout(showPage, 1500); // 3 soniya kutamiz
+  setTimeout(showPage, 200); //
 });
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
+
+
 
 //======================================================================

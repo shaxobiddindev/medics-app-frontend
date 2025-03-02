@@ -1,6 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,44 +8,26 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/profile.css">
   <title>Medics | Profile</title>
 </head>
-
 <body>
-
 <div class="loader" id="loader"></div>
 
 <header class="header">
   <div class="container">
     <div class="header-wrapper">
-      <a href="../index.html" class="logo-link">
+      <a href="main.html" class="logo-link">
         <img src="../img/favicon.svg" alt="" class="logo-image" width="50" height="50">
         Medics
       </a>
-
       <nav class="navbar">
         <ul class="navbar-list">
-          <li class="navbar-list__item">
-            <a href="../index.html" class="navbar-link">
-              <i class="fa-solid fa-house"></i>
-              Home
-            </a>
-          </li>
-          <li class="navbar-list__item">
-            <a href="./message.html" class="navbar-link">
-              <i class="fa-solid fa-envelope"></i>
-              Message
-            </a></li>
-          <li class="navbar-list__item">
-            <a href="./schedule.html" class="navbar-link">
-              <i class="fa-solid fa-calendar-days"></i>
-              Schedule
-            </a></li>
-          <li class="navbar-list__item">
-            <a href="./profile.html" class="navbar-link active">
-              <i class="fa-solid fa-user"></i>
-              Profile
-            </a></li>
+          <li class="navbar-list__item"><a href="main.html" class="navbar-link"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="navbar-list__item"><a href="./message.html" class="navbar-link"><i class="fa-solid fa-envelope"></i>Message</a></li>
+          <li class="navbar-list__item"><a href="./schedule.html" class="navbar-link"><i class="fa-solid fa-calendar-days"></i>Schedule</a></li>
+          <li class="navbar-list__item"><a href="./profile.html" class="navbar-link active"><i class="fa-solid fa-user"></i>Profile</a></li>
+          <li class="navbar-list__item"><button class="logout-btn" id="logout-btn">Log out<i class="fa-solid fa-arrow-right-from-bracket"></i></button></li>
         </ul>
       </nav>
     </div>
@@ -54,15 +35,104 @@
 </header>
 
 <main id="myDiv" class="animate-bottom">
-  <div class="content-image" >
-    <h1>Welcome to</h1>
-    <img src="../img/logo.svg" alt="" width="186" height="193">
-    <h2>app!</h2>
-    <h2>Profile page</h2>
-  </div>
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-wrapper">
+        <div class="sidebar">
+          <ul class="menu-list">
+            <li class="menu-item open" data-section="profile"><i class="fa-solid fa-user"></i> Profile</li>
+            <li class="menu-item" data-section="payment"><i class="fa-solid fa-credit-card"></i> Payment</li>
+            <li class="menu-item" data-section="location"><i class="fa-solid fa-map-marker-alt"></i> Location</li>
+          </ul>
+        </div>
+        <div class="content-wrapper">
+          <div class="section-content profile-section-content open">
+            <div class="profile-picture-wrapper">
+              <img src="../img/profile.png" alt="profile-picture" class="profile-picture" width="200" height="200">
+              <button class="upload-btn"><i class="fa-solid fa-camera"></i></button>
+              <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+            </div>
+            <div class="user-info">
+              <h2 class="user-name"></h2>
+              <hr>
+              <div class="user-details">
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Age:</strong> <span id="age"></span></p>
+                <p><strong>Gender:</strong> <span id="gender"></span></p>
+              </div>
+              <button class="edit-profile-btn">Edit Profile</button>
+            </div>
+            <div class="edit-profile-form" style="display: none;">
+              <input type="text" id="edit-firstName" placeholder="First Name">
+              <input type="text" id="edit-lastName" placeholder="Last Name">
+              <input type="number" id="edit-age" placeholder="Age" min="1" max="200" required>
+              <select id="edit-gender">
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+              </select>
+              <button class="save-profile-btn">Save</button>
+              <button class="cancel-edit-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="section-content payment-section-content">
+            <div class="cards">
+              <h2>Payment Cards</h2>
+              <div class="card-list" id="card-list"></div>
+              <button  class="add-card-toggle-btn">
+                Add New Card
+              </button>
+              <div class="add-card-form" style="display: none;">
+                <input type="text" id="card-number" placeholder="Card Number" maxlength="16">
+                <input type="text" id="expire-date" placeholder="Expire Date (MM/YY)" maxlength="5">
+                <input type="number" id="initial-balance" placeholder="Initial Balance">
+                <button class="add-card-btn">Add Card</button>
+                <button class="cancel-add-card-btn">Cancel</button>
+              </div>
+              <button class="top-up-toggle-btn">Top Up Balance</button>
+              <div class="top-up-form" style="display: none;">
+                <input type="text" id="top-up-card-number" placeholder="Card Number" maxlength="16" required>
+                <input type="number" id="top-up-amount" placeholder="Amount" min="0" required>
+                <button class="top-up-btn">Top Up</button>
+                <button class="cancel-top-up-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div class="section-content location-section-content">
+            <h2>Location</h2>
+            <div class="location-details">
+              <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+              <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+            </div>
+            <button class="edit-location-btn">Edit Location</button>
+            <div class="edit-location-form" style="display: none;">
+              <button class="get-current-location-btn">Use Current Location</button>
+              <input type="number" id="edit-latitude" placeholder="Latitude" step="0.000001">
+              <input type="number" id="edit-longitude" placeholder="Longitude" step="0.000001">
+              <button class="save-location-btn">Save</button>
+              <button class="cancel-location-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<script src="../js/style.js"></script>
-</body>
+<div class="logout-modal" style="display: none;">
+  <div class="logout-modal-content">
+    <p>Are you sure you want to log out?</p>
+    <div class="logout-modal-buttons">
+      <button class="logout-modal-btn yes">Yes</button>
+      <button class="logout-modal-btn no">No</button>
+    </div>
+  </div>
+</div>
 
+<script type="module" src="../js/token-checker.js"></script>
+<script type="module" src="../js/profile/profile.js"></script>
+<script type="module" src="../js/style.js"></script>
+</body>
 </html>
